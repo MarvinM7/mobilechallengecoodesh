@@ -19,7 +19,7 @@ Buscar uma lista de usuários via API, listar os usuários na tela e mostrar det
 - React-native-picker
 - React-navigation
 
-## Para apenas testar a versão atual no celular
+## Para apenas testar a versão atual no celular (Android)
 
 - Instalar o Expo no celular (Android)
 - Abrir o app Expo no celular e fazer a leitura do QRCode abaixo para rodar a aplicação
