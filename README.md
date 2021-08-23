@@ -6,7 +6,7 @@ Realização do mobile challenge 2021 da Coodesh.
 
 ## Descrição
 
-Buscar uma lista de usuários via API e mostrar na tela e mostrar detalhes do usuário ao clicar no mesmo.
+Buscar uma lista de usuários via API, listar os usuários na tela e mostrar detalhes do usuário num modal ao clicar no mesmo.
 
 ## Tecnologias usados
 
