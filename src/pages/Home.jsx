@@ -134,6 +134,7 @@ const Home = (props) => {
                   placeholder='Searching'
                   value={search}
                   onChangeText={setSearch}
+                  onSubmitEditing={()=>searchNat()}
                 />
                 <TouchableOpacity
                   style={styles.searchTouchble}

@@ -82,7 +82,7 @@ const UserListItem = ({ user }) => {
           </View>
           <View style={styles.infoLine}>
             <Text style={styles.textItem}>
-              {`ID: ${login.uuid}`}
+              {`${phone}`}
             </Text>
           </View>
           <View style={styles.infoLine}>

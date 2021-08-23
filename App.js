@@ -37,8 +37,7 @@ export default function App() {
           name="Home"
           component={Home}
           options={{
-            //headerShown: false
-            title: 'Lista de pacientes',
+            title: 'Patient list',
             headerStyle: {
               backgroundColor: '#003461',
             },
