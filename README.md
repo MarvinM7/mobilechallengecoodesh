@@ -16,7 +16,6 @@ Buscar uma lista de usuários via API e mostrar na tela e mostrar detalhes do us
 ## Pacotes externos
 
 - Axios
-- Moment
 - React-native-picker
 - React-navigation
 

@@ -1,8 +1,6 @@
 import React, { useState } from 'react';
 import { Image, Modal, StyleSheet, Text, TouchableOpacity, TouchableWithoutFeedback, View } from 'react-native';
 
-import Moment from 'moment';
-
 import capitalizeFirstLetter from '../functions/capitalizeFirstLetter';
 
 const LineInfo = ({ text }) => {
@@ -18,9 +16,12 @@ const LineInfo = ({ text }) => {
 const UserListItem = ({ user }) => {
   const { dob, email, gender, location, login, name, nat, phone, picture } = user;
   const fullName = `${name.first} ${name.last}`;
-  const { date, age } = dob;
+  const date = new Date(dob.date);
+  const day = date.getDate() < 10 ? `0${date.getDate()}` : date.getDate();
+  const month = date.getMonth() + 1 < 10 ? `0${date.getMonth() + 1}` : date.getMonth() + 1;
+  const year = date.getFullYear();
+  const formatDate = `${day}/${month}/${year}`
   const { city, postcode, state, street } = location;
-  Moment.locale('pt-br');
   const [modalVisible, setModalVisible] = useState(false);
 
   return (
@@ -58,7 +59,7 @@ const UserListItem = ({ user }) => {
             
             <LineInfo text={`Email: ${email}`} />
             <LineInfo text={`Gênero: ${capitalizeFirstLetter(gender)}`} />
-            <LineInfo text={`Data de nascimento: ${Moment(date).format('DD/MM/YYYY')}`} />
+            <LineInfo text={`Data de nascimento: ${formatDate}`} />
             <LineInfo text={`Telefone: ${phone}`} />
             <LineInfo text={`Endereço: ${street.name}, ${street.number}`} />
             <LineInfo text={`CEP: ${postcode}`} />
@@ -89,7 +90,7 @@ const UserListItem = ({ user }) => {
               {`${capitalizeFirstLetter(gender)}`}
             </Text>
             <Text style={styles.textItem}>
-              {`${Moment(date).format('DD/MM/YYYY')}`}
+              {formatDate}
             </Text>
           </View>
         </View>

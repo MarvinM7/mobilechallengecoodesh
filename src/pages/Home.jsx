@@ -83,7 +83,7 @@ const Home = (props) => {
         ?<ActivityIndicator size='large' color='#00AFAD' />
         :error
           ?<Error />
-        : <React.Fragment>
+          :<React.Fragment>
             <View style={styles.centeredView}>
               <Modal
                 animationType="slide"
@@ -125,7 +125,7 @@ const Home = (props) => {
                   </View>
                 </View>
               </Modal>
-            </View>
+            </View> 
 
             <View style={styles.filterView} >
               <View style={styles.textInputView}>
