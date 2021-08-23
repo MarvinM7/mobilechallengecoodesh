@@ -38,14 +38,19 @@ const UserListItem = ({ user }) => {
             <View style={styles.headerModal}>
               <Image style={styles.avatarModal} source={{uri: picture.large}} />
               <View style={styles.subHeader}>
-                <Text style={styles.nameModal}>{`${fullName}`}</Text>
-                <TouchableWithoutFeedback
-                  onPress={() => {
-                    setModalVisible(!modalVisible);
-                  }}
-                >
-                  <Text>X</Text>
-                </TouchableWithoutFeedback>
+                <View style={styles.viewNameModal}>
+                  <Text style={styles.nameModal}>{`${fullName}`}</Text>
+                </View>
+                
+                <View style={styles.closeModal}>
+                  <TouchableWithoutFeedback
+                    onPress={() => {
+                      setModalVisible(!modalVisible);
+                    }}
+                  >
+                    <Text>X</Text>
+                  </TouchableWithoutFeedback>
+                </View>
               </View>
             </View>
             
@@ -146,21 +151,33 @@ const styles = StyleSheet.create({
 
   avatarModal: {
     aspectRatio: 1,
-    width: 100,
-    height: 100,
-    borderRadius: 50
+    maxWidth: 100,
+    maxHeight: 100,
+    flex: 1,
+    borderRadius: 100
   },
 
   subHeader: {
     flexDirection: 'row',
     flexGrow: 1,
-    justifyContent: 'space-between'
+    flex: 5,
+    justifyContent: 'space-between',
+  },
+
+  viewNameModal: {
+    paddingLeft: 10,
+    flex: 16,
+    alignContent: 'center',
+    flexDirection: 'row',
   },
 
   nameModal: {
-    alignSelf: 'center',
     fontSize: 20,
-    paddingLeft: 10,
+    alignSelf: 'center'
+  },
+
+  closeModal: {
+    flex: 1,
   },
 
   modalView: {
