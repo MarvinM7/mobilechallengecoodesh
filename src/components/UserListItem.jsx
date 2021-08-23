@@ -42,13 +42,15 @@ const UserListItem = ({ user }) => {
                   <Text style={styles.nameModal}>{`${fullName}`}</Text>
                 </View>
                 
-                <View style={styles.closeModal}>
+                <View style={styles.closeModalView}>
                   <TouchableWithoutFeedback
                     onPress={() => {
                       setModalVisible(!modalVisible);
                     }}
                   >
-                    <Text>X</Text>
+                    <Text style={styles.closeModalText}>
+                      X
+                    </Text>
                   </TouchableWithoutFeedback>
                 </View>
               </View>
@@ -176,8 +178,12 @@ const styles = StyleSheet.create({
     alignSelf: 'center'
   },
 
-  closeModal: {
+  closeModalView: {
     flex: 1,
+  },
+
+  closeModalText: {
+    fontSize: 16
   },
 
   modalView: {

@@ -96,14 +96,14 @@ const Home = (props) => {
               >
                 <View style={styles.centeredView}>
                   <View style={styles.modalView}>
-                    <View style={styles.closeModal}>
+                    <View style={styles.closeModalView}>
                       <TouchableWithoutFeedback
                         onPress={() => {
                           setFilterVisible(false);
                           setGender('');
                         }}
                       >
-                        <Text>X</Text>
+                        <Text style={styles.closeModalText}>X</Text>
                       </TouchableWithoutFeedback>
                     </View>
                     <Picker
@@ -220,8 +220,12 @@ const styles = StyleSheet.create({
     marginTop: 22
   },
 
-  closeModal: {
+  closeModalView: {
     alignSelf: 'flex-end'
+  },
+
+  closeModalText: {
+    fontSize: 16
   },
 
   modalView: {
