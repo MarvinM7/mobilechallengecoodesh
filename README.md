@@ -19,6 +19,13 @@ Buscar uma lista de usuários via API e mostrar na tela e mostrar detalhes do us
 - React-native-picker
 - React-navigation
 
+## Para apenas testar a versão atual no celular
+
+- Instalar o Expo no celular
+- Abrir o app Expo no celular e fazer a leitura do QRCode abaixo para rodar a aplicação
+
+![alt text](https://github.com/MarvinM7/mobilechallengecoodesh/blob/main/assets/qrcode.png?raw=true)
+
 ## Como instalar e usar
 
 - Instalar o Node no computador (https://nodejs.org/en/)
@@ -27,4 +34,4 @@ Buscar uma lista de usuários via API e mostrar na tela e mostrar detalhes do us
 - Baixar o reposisório
 - Instalar as dependências (de preferência com 'expo install')
 - Rodar o projeto com 'expo start'
-- Abrir o app no celular e usar o QRCode para rodar a aplicação
+- Abrir o app Expo no celular e fazer a leitura do QRCode para rodar a aplicação
