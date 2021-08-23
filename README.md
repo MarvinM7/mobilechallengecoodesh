@@ -27,9 +27,10 @@ react-native-web": "~0.13.12"
 
 ## Como instalar e usar
 
+- Instalar o Node no computador (https://nodejs.org/en/);
 - Instalar o Expo no computador (https://docs.expo.dev/index.html)
 - Instalar o app Expo no celular;
 - Baixar o reposisório;
-- Instalar as dependências (de preferência com <expo install>);
-- Rodar o projeto <expo start>;
+- Instalar as dependências (de preferência com 'expo install');
+- Rodar o projeto com 'expo start';
 - Abrir o app no celular e usar o QRCode para rodar a aplicação.
